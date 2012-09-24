@@ -22,9 +22,17 @@
         <td>{{ heading }}</td>
         <td>{{ created }}</td>
       </tr>
-  {{/each}}
+    {{/each}}
     </tbody>
   </table>
   
+  {{#if is_thread_selected}}
+   <h2>Thread</h2>
+    {{#with thread}}
+      {{ heading }}
+      {{ body }}    
+    {{/with}}  
+  {{/if}}
+ 
 </template>
 
