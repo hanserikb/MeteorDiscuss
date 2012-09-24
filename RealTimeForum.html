@@ -1,0 +1,30 @@
+<head>
+  <title>RealTimeForum</title>
+</head>
+
+<body>
+  {{> threads}}
+</body>
+
+
+<template name="threads">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Heading</th>
+          <th>Created</th>
+        </tr>
+      </thead>
+      <tbody>
+    {{#each threads}}
+      <tr class="thread">
+        <td>{{ heading }}</td>
+        <td>{{ created }}</td>
+      </tr>
+  {{/each}}
+    </tbody>
+  </table>
+  
+</template>
+
